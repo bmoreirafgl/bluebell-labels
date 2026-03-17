@@ -217,7 +217,7 @@
     </div>
     <button class="btn-print" onclick="printSingle()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-      Print 4 Copies
+      Print 2 Copies
     </button>
     <div class="copies-note">Prints 4 full-page sheets · auto-advances to next</div>
   </div>
@@ -369,14 +369,14 @@
   // ── Print engine ──────────────────────────────────────
   function doPrint(labels) {
     printArea.innerHTML = labels.flatMap((label, li) =>
-      Array.from({length: 4}, (_, i) => `
+      Array.from({length: 2}, (_, i) => `
         <div class="print-page">
           <div class="print-company">Flash Global</div>
           <div class="print-project">Project Bluebell</div>
           <div class="print-border">
             <div class="print-sub">Pallet ID</div>
             <div class="print-pallet-label">${label}</div>
-            <div class="print-copy-num">Copy ${i + 1} of 4</div>
+            <div class="print-copy-num">Copy ${i + 1} of 2</div>
           </div>
         </div>`)
     ).join('');
