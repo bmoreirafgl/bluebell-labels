@@ -345,8 +345,8 @@
     if (to < from) { alert('End number must be greater than or equal to start.'); return; }
     const count = to - from + 1;
     document.getElementById('modal-body').innerHTML =
-      `You are about to print <strong>${count * 4} pages</strong><br>
-       (4 copies each of <strong>${prefix}-${from}</strong> to <strong>${prefix}-${to}</strong>)<br><br>
+      `You are about to print <strong>${count * 2} pages</strong><br>
+       (2 copies each of <strong>${prefix}-${from}</strong> to <strong>${prefix}-${to}</strong>)<br><br>
        <span style="color:var(--mid);font-size:13px;">All ${count} labels will be sent in a single print job.</span>`;
     document.getElementById('modal-overlay').classList.add('show');
   }
